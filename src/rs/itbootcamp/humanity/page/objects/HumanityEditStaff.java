@@ -7,7 +7,8 @@ import org.openqa.selenium.WebElement;
 public class HumanityEditStaff {
 	public static final String CLICK_ON_EPLOYEE_XPATH = "//a[contains(text(),'Laza Lazic')]";
 	public static final String EDIT_DETAILS_XPATH = "//a[contains(text(),'Edit Details')]";
-	public static final String UPLOAD_PICTURE_XPATH = "//input[@id='fileupload']";
+	// public static final String UPLOAD_PICTURE_XPATH =
+	// "//input[@id='fileupload']";
 	public static final String NICKNAME_XPATH = "//input[@id='nick_name']";
 	public static final String SAVE_CHANGES_XPATH = "//button[@id='act_primary']";
 
@@ -30,13 +31,13 @@ public class HumanityEditStaff {
 	}
 
 	// UploadPicture Click
-	public static WebElement getUploadPicture(WebDriver driver) {
-		return driver.findElement(By.xpath(UPLOAD_PICTURE_XPATH));
-	}
-
-	public static void clickUploadPicture(WebDriver driver) {
-		getUploadPicture(driver).click();
-	}
+//	public static WebElement getUploadPicture(WebDriver driver) {
+//		return driver.findElement(By.xpath(UPLOAD_PICTURE_XPATH));
+//	}
+//
+//	public static void clickUploadPicture(WebDriver driver) {
+//		getUploadPicture(driver).click();
+//	}
 
 	// Nickname input
 	public static WebElement getNickname(WebDriver driver) {

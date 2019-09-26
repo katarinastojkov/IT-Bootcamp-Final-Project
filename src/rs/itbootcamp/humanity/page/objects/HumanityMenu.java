@@ -5,14 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HumanityMenu {
+	public static final String URL = "https://hittheroadjack.humanity.com/app/dashboard/";
 	private static final String DASHBOARD_BTN_XPATH = "//a[@id='sn_dashboard']//span[@class='primNavQtip__inner']";
 	private static final String SHIFTPLANNING_BTN_XPATH = "//a[@id='sn_schedule']//span[@class='primNavQtip__inner']";
-	private static final String TIMECLOCK_XPATH = "//i[@class='primNavQtip__icon icon-timeclock']";
-	private static final String LEAVE_XPATH = "//i[@class='primNavQtip__icon icon-leave2']";
-	private static final String TRAINING_XPATH = "//i[@class='primNavQtip__icon icon-education']";
+	private static final String TIMECLOCK_XPATH = "//a[@id='sn_timeclock']//span[@class='primNavQtip__inner']";
+	private static final String LEAVE_XPATH = "//a[@id='sn_requests']//span[@class='primNavQtip__inner']";
+	private static final String TRAINING_XPATH = "//a[@id='sn_training']//span[@class='primNavQtip__inner']";
 	private static final String STAFF_XPATH = "//a[@id='sn_staff']//span[@class='primNavQtip__inner']";
-	private static final String PAYROLL_XPATH = "//i[@class='primNavQtip__icon icon-payroll']";
-	private static final String REPORTS_XPATH = "//i[@class='primNavQtip__icon icon-chart']";
+	private static final String PAYROLL_XPATH = "//a[@id='sn_payroll']//span[@class='primNavQtip__inner']";
+	private static final String REPORTS_XPATH = "//a[@id='sn_reports']//span[@class='primNavQtip__inner']";
 	private static final String SETTINGS_XPATH = "//a[@id='sn_admin']";
 
 	// Dashboard btn

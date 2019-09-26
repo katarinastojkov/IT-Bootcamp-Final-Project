@@ -4,19 +4,30 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+//	howafo@net1mail.com
+//	test123
+
 public class HumanityHome {
 	public static final String URL = "https://www.humanity.com";
+	public static final String tURL = "https://www.humanity.com/app/";
 	private static final String ABOUTUS_BTN_XPATH = "//a[@class='nav-link no-before'][contains(text(),'About us')]";
 	private static final String LOGIN_BTN_XPATH = "//p[contains(text(),'LOGIN')]";
+	
+	// Xpath for StartFreeTrialBtn on TOP
 	private static final String STARTFREETRIAL_UP_XPATH = "//a[@class='button pale']";
+	
+	// Xpaths for login direclty from homepage
 	private static final String FULLNAME_XPATH = "//div[@class='input-wrapper']//input[@placeholder='Full Name']";
 	private static final String EMAIL_XPATH = "//div[@class='input-wrapper']//input[@placeholder='Work Email']";
+	
+	// Xpath for StartFreeTrialBtn - BOTTOM
 	private static final String STARTFREETRIAL_DOWN_XPATH = "//input[@id='free-trial-link-01']";
-
+	
 	private static final String EMAIL2_XPATH = "//input[@id='email']";
 	private static final String PASS_XPATH = "//input[@id='password']";
 	private static final String LOGIN2_XPATH = "//button[contains(text(),'Log in')]";
-
+	
+	
 	// AboutUs btn
 	public static WebElement getAboutUs(WebDriver driver) {
 		return driver.findElement(By.xpath(ABOUTUS_BTN_XPATH));
@@ -88,13 +99,14 @@ public class HumanityHome {
 	public static void fillPass(WebDriver driver, String inputText) {
 		getPass(driver).sendKeys(inputText);
 	}
-	
-	// LogIn2 btn
-		public static WebElement getLogIn2(WebDriver driver) {
-			return driver.findElement(By.xpath(LOGIN2_XPATH));
-		}
 
-		public static void clickLogIn2(WebDriver driver) {
-			getLogIn2(driver).click();
-		}
+	// LogIn2 btn
+	public static WebElement getLogIn2(WebDriver driver) {
+		return driver.findElement(By.xpath(LOGIN2_XPATH));
+	}
+
+	public static void clickLogIn2(WebDriver driver) {
+		getLogIn2(driver).click();
+	}
+	
 }

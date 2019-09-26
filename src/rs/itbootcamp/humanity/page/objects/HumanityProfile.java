@@ -10,7 +10,7 @@ public class HumanityProfile {
 	public static final String SETTINGS_MENU_XPATH = "//div[@class='userm userm-mainPage']//a[contains(text(),'Settings')]";
 	public static final String AVAILABILITY_MENU_XPATH = "//div[@class='userm userm-mainPage']//a[contains(text(),'Availability')]";
 	public static final String SIGNOUT_MENU_XPATH = "//a[contains(text(),'Sign Out')]";
-	public static final String VERSION_XPATH = "//b[contains(text(),'9.5.5')]";
+	public static final String VERSION_XPATH = "//div[@id='humanityAppVersion']";
 
 	// UserMenu
 	public static WebElement getUserMenu(WebDriver driver) {
@@ -64,7 +64,6 @@ public class HumanityProfile {
 
 	public static String getVersion(WebDriver driver) {
 		return getVersionElement(driver).getAttribute("innerHTML");
-		
 	}
 
 }

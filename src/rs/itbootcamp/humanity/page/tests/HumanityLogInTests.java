@@ -19,13 +19,23 @@ public class HumanityLogInTests {
 		driver.manage().window().maximize();
 
 		HumanityHome.clickLogIn(driver);
-		HumanityHome.fillEmail2(driver, "howafo@net1mail.com");
-		HumanityHome.fillPass(driver, "test123");
+
+		// Method for checking url
+		if (driver.getCurrentUrl().contains(HumanityHome.tURL) == false) {
+			return false;
+		}
+
+		String email, pass;
+		email = "howafo@net1mail.com";
+		pass = "test123";
+
+		HumanityHome.fillEmail2(driver, email);
+		HumanityHome.fillPass(driver, pass);
 		HumanityHome.clickLogIn2(driver);
-		
+
 		Thread.sleep(6000);
 		driver.quit();
-	
+
 		return true;
 
 	}

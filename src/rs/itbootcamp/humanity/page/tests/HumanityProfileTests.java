@@ -19,13 +19,19 @@ public class HumanityProfileTests {
 		driver.manage().window().maximize();
 
 		HumanityHome.clickLogIn(driver);
+
+		// Method for checking url
+		if (driver.getCurrentUrl().contains(HumanityHome.tURL) == false) {
+			return false;
+		}
 		HumanityHome.fillEmail2(driver, "howafo@net1mail.com");
 		HumanityHome.fillPass(driver, "test123");
 		HumanityHome.clickLogIn2(driver);
-		
+
 		HumanityProfile.clickUserMenu(driver);
 		System.out.println("Version: " + HumanityProfile.getVersion(driver));
-		
+		Thread.sleep(3000);
+		driver.quit();
 		return true;
 	}
 }

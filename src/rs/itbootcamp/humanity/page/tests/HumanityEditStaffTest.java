@@ -2,7 +2,9 @@ package rs.itbootcamp.humanity.page.tests;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import rs.itbootcamp.humanity.page.objects.HumanityEditStaff;
@@ -25,19 +27,25 @@ public class HumanityEditStaffTest {
 		HumanityHome.fillPass(driver, "test123");
 		HumanityHome.clickLogIn2(driver);
 		HumanityMenu.clickStaff(driver);
-		HumanityStaff.clickAddEmloyees(driver);
-		HumanityStaff.setFirstNameInput(driver, "Laza", 1);
-		HumanityStaff.setLastNameInput(driver, "Lazic", 1);
-		HumanityStaff.setEmailInput(driver, "lasko@gmail.com", 1);
-		HumanityStaff.clickSaveEmployees(driver);
+//		HumanityStaff.clickAddEmloyees(driver);
+//		HumanityStaff.setFirstNameInput(driver, "Laza", 1);
+//		HumanityStaff.setLastNameInput(driver, "Lazic", 1);
+//		HumanityStaff.setEmailInput(driver, "lasko@gmail.com", 1);
+//		HumanityStaff.clickSaveEmployees(driver);
 		HumanityMenu.clickStaff(driver);
 		HumanityStaff.clickOnEmployee(driver);
 		HumanityStaff.clickEditDetails(driver);
-		//HumanityStaff.clickUploadPicture(driver);
+
+		// Upload Picture
+		String xpathPic = "//input[@id='fileupload']";
+		String pathToPic = "C:\\Users\\Administrator\\Documents\\QA testing - IT Bootcamp 2019\\AUTOMATION\\Zavrsni projekat\\relieved-smiley.png";
+		String url = "https://hittheroadjack.humanity.com/app/staff/edit/5093543/";
+		driver.get(url);
+		WebElement chooseFile = driver.findElement(By.xpath(xpathPic));
+		chooseFile.sendKeys(pathToPic);
+
 		HumanityEditStaff.fillNickname(driver, "zika");
 		HumanityEditStaff.clickSaveChanges(driver);
-		
-		
 
 		Thread.sleep(6000);
 		driver.quit();

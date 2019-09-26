@@ -7,11 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import rs.itbootcamp.humanity.page.objects.HumanityHome;
 import rs.itbootcamp.humanity.page.objects.HumanityMenu;
-import rs.itbootcamp.humanity.page.objects.HumanityStaff;
 
-public class HumanityAddNewEmployeeTests {
-
-	public static boolean testAddEmployees() throws InterruptedException {
+public class HumanityMenuTests {
+	public static boolean testMenu() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -21,29 +19,27 @@ public class HumanityAddNewEmployeeTests {
 		driver.manage().window().maximize();
 
 		HumanityHome.clickLogIn(driver);
-
-		// Method for checking url
-		if (driver.getCurrentUrl().contains(HumanityHome.tURL) == false) {
-			return false;
-		}
-
+	
 		HumanityHome.fillEmail2(driver, "howafo@net1mail.com");
 		HumanityHome.fillPass(driver, "test123");
 		HumanityHome.clickLogIn2(driver);
-
-		HumanityMenu.clickStaff(driver);
-
-		HumanityStaff.clickAddEmloyees(driver);
-
-		HumanityStaff.setFirstNameInput(driver, "Laza", 1);
-		HumanityStaff.setLastNameInput(driver, "Lazic", 1);
-		HumanityStaff.setEmailInput(driver, "lasko@gmail.com", 1);
 		
-		HumanityStaff.clickSaveEmployees(driver);
-
-		Thread.sleep(3000);
+		HumanityMenu.clickDashboard(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickShiftPlanning(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickTimeClock(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickLeave(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickTraining(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickStaff(driver);
+		Thread.sleep(2000);
+		HumanityMenu.clickPayroll(driver);
+		Thread.sleep(5000);
+		
 		driver.quit();
 		return true;
-
-	}
+}
 }

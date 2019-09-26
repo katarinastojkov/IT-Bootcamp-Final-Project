@@ -22,11 +22,6 @@ public class HumanityStaff {
 //
 //	public static final String ADD_EMPLOYEES_TABLE = "";
 
-	// lista
-
-	// List<WebElement> listOfEmployees;
-
-	// public static List
 
 	// AddEmloyees
 	public static WebElement getAddEmloyees(WebDriver driver) {
