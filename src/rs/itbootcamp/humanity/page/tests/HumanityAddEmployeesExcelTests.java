@@ -51,19 +51,20 @@ public class HumanityAddEmployeesExcelTests {
 		System.out.println(row + " employees.");
 					
 		Random ran = new Random(1000);
-		for (int i = 0; i < row; i++) {
+		for (int i = 1; i < row; i++) {
 			Thread.sleep(1000);
 			HumanityStaff.clickAddEmloyees(driver);
-			String name = ExcelUtils.getDataAt(i + 1, 0);
-			String surname = ExcelUtils.getDataAt(i + 1, 1);
-			String email = ExcelUtils.getDataAt(i + 1, 2);
+			String name = ExcelUtils.getDataAt(i , 0);
+			String surname = ExcelUtils.getDataAt(i , 1);
+			String email = ExcelUtils.getDataAt(i , 2);
 
 			HumanityStaff.setFirstNameInput(driver, name, i);
 			HumanityStaff.setLastNameInput(driver, surname, i);
-			HumanityStaff.setEmailInput(driver, ran.nextInt(1000)+email, i);
-			
+			HumanityStaff.setEmailInput(driver, Math.random()+email, i);
 			HumanityStaff.clickSaveEmployees(driver);
+			Thread.sleep(5000);
 		}
+
 		ExcelUtils.closeExcell();
 		
 		} catch (Exception e) {

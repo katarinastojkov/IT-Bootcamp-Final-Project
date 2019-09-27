@@ -33,9 +33,11 @@ public class HumanityEditStaffTest {
 //		HumanityStaff.setEmailInput(driver, "lasko@gmail.com", 1);
 //		HumanityStaff.clickSaveEmployees(driver);
 		HumanityMenu.clickStaff(driver);
+		Thread.sleep(3000);
 		HumanityStaff.clickOnEmployee(driver);
+		Thread.sleep(3000);
 		HumanityStaff.clickEditDetails(driver);
-
+		Thread.sleep(3000);
 		// Upload Picture
 		String xpathPic = "//input[@id='fileupload']";
 		String pathToPic = "C:\\Users\\Administrator\\Documents\\QA testing - IT Bootcamp 2019\\AUTOMATION\\Zavrsni projekat\\relieved-smiley.png";
@@ -43,7 +45,7 @@ public class HumanityEditStaffTest {
 		driver.get(url);
 		WebElement chooseFile = driver.findElement(By.xpath(xpathPic));
 		chooseFile.sendKeys(pathToPic);
-
+		Thread.sleep(3000);
 		HumanityEditStaff.fillNickname(driver, "zika");
 		HumanityEditStaff.clickSaveChanges(driver);
 

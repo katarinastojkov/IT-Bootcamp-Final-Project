@@ -34,11 +34,11 @@ public class HumanityAddNewEmployeeTests {
 		HumanityMenu.clickStaff(driver);
 
 		HumanityStaff.clickAddEmloyees(driver);
-
+		Thread.sleep(4000);
 		HumanityStaff.setFirstNameInput(driver, "Laza", 1);
 		HumanityStaff.setLastNameInput(driver, "Lazic", 1);
 		HumanityStaff.setEmailInput(driver, "lasko@gmail.com", 1);
-		
+		Thread.sleep(3000);
 		HumanityStaff.clickSaveEmployees(driver);
 
 		Thread.sleep(3000);

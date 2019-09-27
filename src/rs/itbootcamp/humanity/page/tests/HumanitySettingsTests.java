@@ -23,12 +23,16 @@ public class HumanitySettingsTests {
 		HumanityHome.fillEmail2(driver, "howafo@net1mail.com");
 		HumanityHome.fillPass(driver, "test123");
 		HumanityHome.clickLogIn2(driver);
-		
+
 		HumanityMenu.clickSettings(driver);
+		Thread.sleep(3000);
 		HumanitySettings.inputCountry(driver, "Spain");
+		Thread.sleep(3000);
 		HumanitySettings.inputDefaultLanguage(driver, "Spanish");
+		Thread.sleep(3000);
 		HumanitySettings.inputTimeFormat(driver, "24 hour");
-		
+		Thread.sleep(3000);
+		driver.quit();
 		return true;
-}
+	}
 }

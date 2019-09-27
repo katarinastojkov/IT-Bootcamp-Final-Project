@@ -25,19 +25,21 @@ public class HumanityMenuTests {
 		HumanityHome.clickLogIn2(driver);
 		
 		HumanityMenu.clickDashboard(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickShiftPlanning(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickTimeClock(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickLeave(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickTraining(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickStaff(driver);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		HumanityMenu.clickPayroll(driver);
-		Thread.sleep(5000);
+		Thread.sleep(4000);
+		HumanityMenu.clickReports(driver);
+		Thread.sleep(4000);
 		
 		driver.quit();
 		return true;

@@ -29,7 +29,18 @@ public class HumanityProfileTests {
 		HumanityHome.clickLogIn2(driver);
 
 		HumanityProfile.clickUserMenu(driver);
+		HumanityProfile.clickProfileMeni(driver);
+		Thread.sleep(3000);
+		HumanityProfile.clickUserMenu(driver);
+		HumanityProfile.clickSettingsMeni(driver);
+		Thread.sleep(3000);
+		HumanityProfile.clickUserMenu(driver);
+		HumanityProfile.clickAvailability(driver);
+		Thread.sleep(3000);
+		HumanityProfile.clickUserMenu(driver);
 		System.out.println("Version: " + HumanityProfile.getVersion(driver));
+		Thread.sleep(3000);
+		HumanityProfile.clickSignOut(driver);
 		Thread.sleep(3000);
 		driver.quit();
 		return true;
